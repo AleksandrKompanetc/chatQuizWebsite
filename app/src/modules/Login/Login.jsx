@@ -3,6 +3,7 @@ import { auth, Firebase } from '../../firebase/firebaseConfig';
 
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import style from './Login.module.css';
 
 function Login() {
     const dispatch = useDispatch();
