@@ -1,0 +1,22 @@
+body {
+    overflow: hidden;
+}
+
+.login-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9d9d9d;
+}
+
+.login-btn {
+    width: 20%;
+    height: 7%;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: #171427;
+    color: #3ee3cd;
+    cursor: pointer;
+}
