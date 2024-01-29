@@ -1,11 +1,11 @@
-Header {
+.header {
     width: 100vw;
     display: flex;
     justify-content: end;
     align-items: center;
 }
 
-.Button {
+.button {
     border: none;
     font-size: 30px;
     color: aquamarine;

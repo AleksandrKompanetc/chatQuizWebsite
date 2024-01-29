@@ -2,7 +2,7 @@ body {
     overflow: hidden;
 }
 
-.login-wrapper {
+.wrapper {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -10,7 +10,7 @@ body {
     background-color: #9d9d9d;
 }
 
-.login-btn {
+.btn {
     width: 20%;
     height: 7%;
     font-size: 25px;
