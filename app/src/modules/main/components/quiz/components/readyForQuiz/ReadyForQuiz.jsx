@@ -1,23 +1,12 @@
 import React from 'react';
-import { useDispatch, useDispatch, useSelector } from 'react-redux';
-import { fetchUserReadyToStartQuiz } from '../../../../../../store/actions/quizAction';
+import 'styles.css';
 
 const ReadyForQuiz = () => {
-    const dispatch = useDispatch();
-    const isUserReadyToStartQuiz = useSelector(state => state.quizState.isUserReadyToStartQuiz);
-    const toggleUserReady = () => {
-        dispatch(fetchUserReadyToStartQuiz(!isUserReadyToStartQuiz));
-    };
-
     return (
-        <div>
-            {isUserReadyToStartQuiz ? (
-                <button onClick={toggleUserReady}>Cancel</button>
-            ) : (
-                <button onClick={toggleUserReady}>Start</button>
-            )}
+        <div className='ready-for-quiz-wrapper'>
+            Ready for Quiz
         </div>
     );
 };
 
-export defualt ReadyForQuiz;
+export default ReadyForQuiz;

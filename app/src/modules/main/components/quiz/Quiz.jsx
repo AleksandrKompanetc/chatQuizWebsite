@@ -1,12 +1,44 @@
 import React from 'react';
-import ReadyForQuiz from './components/readyForQuiz/ReadyForQuiz';
+import { connect } from 'react-redux';
+import * as actions from '../../../../store/actions/quizAction';
+import * as selectors from '../../Main';
+import Game from './components/game/Game';
+import Results from './components/results/Results';
+import ReadyForGame from './components/readyForQuiz/ReadyForQuiz';
+import styles from './Quiz.module.css';
 
-const Quiz = () => {
+const Quiz = ({
+    isShowResults,
+    isQuizInProcess,
+    setIsReadyForGame,
+    isUserReadyToStartQuiz,
+}) => {
     return (
-        <div>
-            <ReadyForQuiz />
+        <div className={styles.wrapper}>
+            {isQuizInProcess ?
+                !isShowResults ?
+                    <Game />
+                    :
+                    <Results />
+                :
+                <ReadyForGame
+                    callback={setIsReadyForGame}
+                    isUserReadyToStartQuiz={isUserReadyToStartQuiz}
+                />
+            }
         </div>
-    )
-}
+    );
+};
 
-export default Quiz;
+const mapStateToProps = state => ({
+    isShowResults: selectors.getIsShowResults(state),
+    isQuizInProcess: selectors.isQuizInProcess(state),
+    isUserReadyToStartQuiz: selectors.getIsUserReadyToStartQuiz(state),
+});
+
+const mapDispatchToProps = dispatch => ({
+    setIsReadyForGame: payload => dispatch(actions.setIsReadyForGame(payload)),
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Quiz);
