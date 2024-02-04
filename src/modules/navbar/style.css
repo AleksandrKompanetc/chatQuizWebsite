@@ -1,0 +1,26 @@
+.Header {
+    width: 100vw;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #0a101d;
+    
+}
+
+.wrapper_buttons_nav {
+    display: flex;
+    align-items: center;
+}
+.Button {
+    border: none;
+    padding: 0;
+    margin-left: 30px;
+    font-size: 30px;
+    color: white;
+    background-color: transparent;
+    height: 50px;
+}
+
+.NavLink:focus {
+       color: hsl(182, 96%, 50%);
+}
