@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../../../store/actions/quizAction';
-import * as selectors from '../../Main';
+import * as actions from '../../store/actions/quizAction';
+import * as selectors from '../main/Main';
 import Game from './components/game/Game';
 import Results from './components/results/Results';
 import ReadyForGame from './components/readyForQuiz/ReadyForQuiz';

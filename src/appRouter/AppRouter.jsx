@@ -1,14 +1,15 @@
 import React from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import Main from '../main/Main';
-import Login from '../Login/Login';
+import Main from '../pages/main/Main';
+import Login from '../pages/login/Login';
 import { connect } from 'react-redux';
-import Chat from '../main/components/chat/Chat';
-import Quiz from '../main/components/quiz/Quiz';
+import Chat from '../pages/chat/Chat';
+import Quiz from '../pages/quiz/Quiz';
 
 const AppRouter = ({
     user,
 }) => {
+    console.log(user);
     return (
         user ?
             <Routes>

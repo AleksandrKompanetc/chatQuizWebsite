@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css';
-import correctAnswerImage from '../../../../../../images/correct-answer-image.svg.png';
-import notCorrectAnswerImage from '../../../../../../images/not-correct-answer-image.png';
+import correctAnswerImage from '../../../../images/correct-answer-image.svg.png';
+import notCorrectAnswerImage from '../../../../images/not-correct-answer-image.png';
 import { connect } from 'react-redux';
-import * as actions from '../../../../../../store/actions/quizAction';
-import * as selectors from '../../../../Main';
+import * as actions from '../../../../store/actions/quizAction';
+import * as selectors from '../../../main/Main';
 
 const Game = ({
     text,

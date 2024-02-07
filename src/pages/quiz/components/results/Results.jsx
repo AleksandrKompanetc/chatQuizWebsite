@@ -1,8 +1,9 @@
 import React from 'react';
 import UserScores from './components/userScores/UserScores';
 import { connect } from 'react-redux';
-import * as actions from '../../../../../../store/actions/quizAction';
-import * as selectors from '../../../../Main';
+import * as actions from '../../../../store/actions/quizAction';
+
+import * as selectors from '../../../main/Main';
 import './styles.css';
 
 const Results = ({
