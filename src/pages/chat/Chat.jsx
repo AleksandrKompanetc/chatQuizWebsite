@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useLayoutEffect } from 'react';
 import UserMessage from './components/userMessage/UserMessage';
 import TextField from './components/textField/TextField';
 import { connect } from 'react-redux';
-import * as actions from '../../../../store/actions/chatActions';
-import * as selectors from '../../Main';
+import * as actions from '../../store/actions/chatActions';
+import * as selectors from '../main/Main';
 import './styles.css';
 
 const Chat = ({
@@ -14,7 +14,7 @@ const Chat = ({
     const messageEl = useRef(null);
 
     useEffect(() => {
-        if (messageEl) {
+        if (messageEl.current) {
             messageEl.current.addEventListener('DOMNodeInserted', event => {
                 const { currentTarget: target } = event;
                 target.scroll({ top: target.scrollHeight, behavior: 'smooth' });

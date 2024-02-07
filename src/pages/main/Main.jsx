@@ -1,6 +1,6 @@
 import React from 'react';
-import Quiz from './components/quiz/Quiz';
-import Chat from './components/chat/Chat';
+import Quiz from '../quiz/Quiz';
+import Chat from '../chat/Chat';
 import './style.css';
 import { createSelector } from 'reselect';
 
